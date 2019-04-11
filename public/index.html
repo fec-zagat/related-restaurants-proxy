@@ -7,15 +7,15 @@
   </head>
   <body>
     <div id="modal" style=" position: relative; z-index: 999;"></div>
-    <!-- <div id="photo-carousel-service"></div> -->
+    <div id="photo-carousel-service"></div>
     <div id="nav-service"></div>
-    <!-- <div id="sidebar-service"></div> -->
+    <div id="sidebar-service"></div>
     <div id="related-restaurants-service"></div>
     <script src="./lib/react.development.js"></script>
     <script src="./lib/react-dom.development.js"></script>
     <script type="text/javascript" src="http://localhost:3001/r/:restaurant/bundle.js"></script>
-    <!-- <script type="text/javascript" src="http://localhost:3002/r/:restaurant/bundle.js"></script> -->
-    <!-- <script type="text/javascript" src="http://localhost:3003/r/:restaurant/bundle.js"></script> -->
+    <script type="text/javascript" src="http://localhost:3002/r/:restaurant/bundle.js"></script>
+    <script type="text/javascript" src="http://localhost:3003/r/:restaurant/bundle.js"></script>
     <script type="text/javascript" src="http://localhost:3004/r/:restaurant/bundle.js"></script>
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
@@ -23,14 +23,14 @@
         React.createElement(NavSearchBar),
         document.getElementById('nav-service')
         );
-      // ReactDOM.render(
-        //   React.createElement(PhotoCarousel),
-        //   document.getElementById('photo-carousel-service')
-        // );
-      // ReactDOM.render(
-        //   React.createElement(SideBarApp),
-        //   document.getElementById('sidebar-service')
-        // );
+      ReactDOM.render(
+          React.createElement(PhotoCarousel),
+          document.getElementById('photo-carousel-service')
+        );
+      ReactDOM.render(
+          React.createElement(SideBarApp),
+          document.getElementById('sidebar-service')
+        );
       ReactDOM.render(
         React.createElement(RelatedRestaurantApp),
         document.getElementById('related-restaurants-service')
