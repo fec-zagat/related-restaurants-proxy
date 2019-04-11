@@ -11,8 +11,8 @@ app.use(cors());
 app.use('/r/:restaurants', express.static(path.join(__dirname, 'public')));
 app.use('/', proxy({ target: 'http://localhost:3004', changeOrigin: true }))
 app.use('/', proxy({ target: 'http://localhost:3001', changeOrigin: true }))
-// app.use('/', proxy({ target: 'http://localhost:3002', changeOrigin: true }))
-// app.use('/', proxy({ target: 'http://localhost:3003', changeOrigin: true }))
+app.use('/', proxy({ target: 'http://localhost:3002', changeOrigin: true }))
+app.use('/', proxy({ target: 'http://localhost:3003', changeOrigin: true }))
 
 
 app.listen(port, () => {
