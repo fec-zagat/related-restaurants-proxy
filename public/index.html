@@ -2,21 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <!-- <link rel="stylesheet" href="/styles.css"> -->
     <title></title>
   </head>
   <body>
     <div id="modal" style=" position: relative; z-index: 999;"></div>
+    <div id='map-modal'></div>
     <div id="photo-carousel-service"></div>
     <div id="nav-service"></div>
     <div id="sidebar-service"></div>
     <div id="related-restaurants-service"></div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/materia/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="./lib/react.development.js"></script>
     <script src="./lib/react-dom.development.js"></script>
-    <script type="text/javascript" src="http://localhost:3001/r/:restaurant/bundle.js"></script>
-    <script type="text/javascript" src="http://localhost:3002/r/:restaurant/bundle.js"></script>
-    <script type="text/javascript" src="http://localhost:3003/r/:restaurant/bundle.js"></script>
-    <script type="text/javascript" src="http://localhost:3004/r/:restaurant/bundle.js"></script>
+    <script type="text/javascript" src="http://ec2-54-86-57-168.compute-1.amazonaws.com/r/:restaurant/bundle.js"></script>
+    <script type="text/javascript" src="http://3.82.223.158/r/:restaurant/bundle.js"></script>
+    <script type="text/javascript" src="http://3.19.30.103/r/:restaurant/bundle.js"></script>
+    <script type="text/javascript" src="http://ec2-52-14-95-246.us-east-2.compute.amazonaws.com/r/:restaurant/bundle.js"></script>
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       ReactDOM.render(
@@ -24,11 +29,11 @@
         document.getElementById('nav-service')
         );
       ReactDOM.render(
-          React.createElement(PhotoCarousel),
+          React.createElement(PhotoCarouselApp),
           document.getElementById('photo-carousel-service')
         );
       ReactDOM.render(
-          React.createElement(SideBarApp),
+          React.createElement(SideBar),
           document.getElementById('sidebar-service')
         );
       ReactDOM.render(
